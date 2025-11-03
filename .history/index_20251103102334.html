@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <style>
+        :root{
+            --accent: #1e90ff;
+            --muted: #444;
+            --bg: #f7f9fc;
+            --card: #ffffff;
+            --radius: 12px;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: var(--muted);
+            background: linear-gradient(180deg, var(--bg), #ffffff);
+            -webkit-font-smoothing:antialiased;
+        }
+        .container{
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 24px;
+        }
+        header h1{
+            margin: 0 0 18px 0;
+            text-align: center;
+            color: var(--accent);
+            font-size: 32px;
+        }
+        .profile{
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        .avatar{
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 8px;
+            box-shadow: 0 6px 18px rgba(30,30,30,0.08);
+            text-align: center;
+        }
+        .avatar img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+        .intro{
+            background: var(--card);
+            padding: 18px;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 18px rgba(30,30,30,0.06);
+        }
+        .intro h2{ margin-top: 0; color: #222 }
+        .hobbies{
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .hobby{
+            background: linear-gradient(180deg, #fff, #fbfdff);
+            border: 1px solid rgba(0,0,0,0.04);
+            padding: 10px 14px;
+            border-radius: 10px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            min-width: 140px;
+        }
+        .hobby .icon{
+            width: 28px; height: 28px; display: inline-grid; place-items: center;
+            background: var(--accent); color: white; border-radius: 6px; font-weight: bold;
+        }
+        @media (max-width: 760px){
+            .profile{ grid-template-columns: 1fr; }
+            .avatar{ order: -1 }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Please Find Everything About Me Here</h1>
+        </header>
+
+        <section class="profile">
+            <div class="avatar">
+                <!-- local image file Tracy.jpg in the project root -->
+                <img src="Tracy.jpg" alt="Tracy portrait">
+            </div>
+
+            <div class="intro">
+                <h2>Introduction</h2>
+                <p>My name is <strong>Keeya Tracy Mbeiza</strong>, an aspiring computer wizard. I'm passionate about tech and proactive about continuous learning — in tech, learning never stops. I'm currently pursuing a diploma in Computer Science at the <a href="https://www.witi.ac.ug/" target="_blank" rel="noopener">Women's Institute Of Technology And Innovation (WITI)</a>.</p>
+
+                <h3>Hobbies</h3>
+                <div class="hobbies" aria-label="list of hobbies">
+                    <div class="hobby"><span class="icon">♪</span><span>Singing (Gospel)</span></div>
+                    <div class="hobby"><span class="icon">💃</span><span>Dancing</span></div>
+                    <div class="hobby"><span class="icon">📚</span><span>Learning new tech</span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
